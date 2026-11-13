@@ -1,0 +1,901 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Fathudzikri Aulia | Business &amp; IT Strategist Portfolio</title>
+  
+  <!-- Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            inter: ['Inter', 'sans-serif']
+          },
+          colors: {
+            teal: {
+              brand: '#0D8A9E',
+              dark: '#086372',
+              light: '#E6F6F8'
+            },
+            charcoal: {
+              DEFAULT: '#111827',
+              muted: '#4B5563',
+              subtle: '#9CA3AF'
+            },
+            surface: {
+              canvas: '#F4F5F7',
+              card: '#FFFFFF',
+              muted: '#F8F9FA'
+            }
+          },
+          borderRadius: {
+            '3xl': '24px',
+            '4xl': '32px'
+          },
+          boxShadow: {
+            'bento': '0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02)',
+            'bento-hover': '0 20px 40px -15px rgba(0, 0, 0, 0.08), 0 8px 10px -4px rgba(0, 0, 0, 0.03)',
+            'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Glassmorphism & utilities */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+    .glass-dark {
+      background: rgba(17, 24, 39, 0.8);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .badge-pulse {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+      }
+    }
+    .lavender-gradient {
+      background: linear-gradient(135deg, #FFFFFF 0%, #EEF2FF 50%, #E0E7FF 100%);
+    }
+    .text-tight {
+      letter-spacing: -0.03em;
+    }
+  </style>
+</head>
+<body class="bg-[#F4F5F7] text-charcoal font-sans antialiased selection:bg-[#0D8A9E] selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- NAVBAR (Sticky Header with Backdrop Blur) -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 w-full px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto">
+      <nav class="bg-white/80 backdrop-blur-md border border-gray-200/80 rounded-full px-4 sm:px-6 py-3 flex items-center justify-between shadow-sm transition-all duration-300">
+        
+        <!-- Left: Monogram Brand -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-full bg-charcoal text-white flex items-center justify-center font-bold text-sm tracking-wider transition-transform duration-300 group-hover:scale-105 shadow-inner">
+            MFA
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-sm tracking-wider text-charcoal group-hover:text-[#0D8A9E] transition-colors">
+              FATHUDZIKRI
+            </span>
+            <span class="text-[10px] uppercase font-semibold text-gray-400 tracking-wider">
+              Business &amp; IT Strategist
+            </span>
+          </div>
+        </a>
+
+        <!-- Center: Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#about" class="px-4 py-2 text-xs lg:text-sm font-semibold text-charcoal-muted hover:text-charcoal hover:bg-gray-100/70 rounded-full transition-all">About</a>
+          <a href="#competencies" class="px-4 py-2 text-xs lg:text-sm font-semibold text-charcoal-muted hover:text-charcoal hover:bg-gray-100/70 rounded-full transition-all">Competencies</a>
+          <a href="#works" class="px-4 py-2 text-xs lg:text-sm font-semibold text-charcoal-muted hover:text-charcoal hover:bg-gray-100/70 rounded-full transition-all">Selected Works</a>
+          <a href="#experience" class="px-4 py-2 text-xs lg:text-sm font-semibold text-charcoal-muted hover:text-charcoal hover:bg-gray-100/70 rounded-full transition-all">Experience</a>
+          <a href="#contact" class="px-4 py-2 text-xs lg:text-sm font-semibold text-charcoal-muted hover:text-charcoal hover:bg-gray-100/70 rounded-full transition-all">Contact</a>
+        </div>
+
+        <!-- Right: Primary CTA (WhatsApp Direct) & Mobile Menu Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/6281513687278?text=Hello%20Muhammad%20Fathudzikri,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-charcoal hover:bg-[#0D8A9E] text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 shadow hover:shadow-md transform hover:-translate-y-0.5">
+            <span>Let's Talk</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-75"></i>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-charcoal hover:bg-gray-200 transition-colors focus:outline-none" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars-staggered text-sm"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 bg-white/95 backdrop-blur-lg border border-gray-200 rounded-3xl p-5 shadow-lg flex-col gap-3">
+        <a href="#about" class="mobile-nav-link px-4 py-2.5 rounded-xl font-semibold text-sm text-charcoal hover:bg-gray-100 transition-colors">About</a>
+        <a href="#competencies" class="mobile-nav-link px-4 py-2.5 rounded-xl font-semibold text-sm text-charcoal hover:bg-gray-100 transition-colors">Competencies</a>
+        <a href="#works" class="mobile-nav-link px-4 py-2.5 rounded-xl font-semibold text-sm text-charcoal hover:bg-gray-100 transition-colors">Selected Works</a>
+        <a href="#experience" class="mobile-nav-link px-4 py-2.5 rounded-xl font-semibold text-sm text-charcoal hover:bg-gray-100 transition-colors">Experience &amp; Education</a>
+        <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl font-semibold text-sm text-charcoal hover:bg-gray-100 transition-colors">Contact</a>
+        <div class="pt-3 border-t border-gray-100">
+          <a href="https://wa.me/6281513687278" target="_blank" class="w-full inline-flex justify-center items-center gap-2 bg-[#0D8A9E] text-white py-3 rounded-full font-semibold text-sm">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTAINER (Bento Grid Architecture) -->
+  <!-- ========================================================================= -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 1: HERO SECTION (2-Column Asymmetrical Bento Grid) -->
+    <!-- ======================================================================= -->
+    <section id="hero" class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch"><!-- Left Column: Executive Value Proposition (Editorial Craft) -->
+<div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 lg:p-12 border border-gray-200/80 shadow-sm flex flex-col justify-between relative overflow-hidden">
+  <div class="space-y-6">
+    <!-- Refined Editorial Status Indicator -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-charcoal text-xs font-mono tracking-wide">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>AVAILABLE FOR ROLES &amp; ADVISORY • 2025</span>
+    </div>
+
+    <!-- Headline with Authoritative Editorial Typography -->
+    <div class="space-y-3">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal leading-[1.15] text-tight">
+        Bridging <span class="underline decoration-gray-300 underline-offset-4 text-[#0D8A9E]">Business Strategy</span> &amp; Digital Systems.
+      </h1>
+      <p class="text-base sm:text-lg font-medium text-charcoal-muted">
+        Business Analyst • IT Project Manager • Cross-Border Operations Lead
+      </p>
+    </div>
+
+    <!-- Concise Executive Summary -->
+    <p class="text-charcoal-muted text-sm sm:text-base leading-relaxed max-w-2xl font-inter">
+      Information Technology graduate (Digital Transformation) from <strong class="text-charcoal font-semibold">IIUM</strong>. Bridging high-stakes enterprise systems architecture (PRD, SRS, UML, ERD) at national trade platform <strong class="text-charcoal font-semibold">ASPENKU</strong> with ground-truth international B2B export operations at <strong class="text-charcoal font-semibold">CV Nusagri</strong>.
+    </p>
+
+    <!-- Grounded Editorial Stats Strip -->
+    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-gray-100">
+      <div>
+        <span class="block text-2xl sm:text-3xl font-bold text-charcoal tracking-tight">04<span class="text-[#0D8A9E]">+</span></span>
+        <span class="text-[11px] font-mono text-gray-400 uppercase tracking-wider">Years Exp</span>
+      </div>
+      <div class="border-l border-gray-100 pl-4">
+        <span class="block text-2xl sm:text-3xl font-bold text-charcoal tracking-tight">B2B</span>
+        <span class="text-[11px] font-mono text-gray-400 uppercase tracking-wider">Global Trade</span>
+      </div>
+      <div class="border-l border-gray-100 pl-4">
+        <span class="block text-2xl sm:text-3xl font-bold text-charcoal tracking-tight">SDLC</span>
+        <span class="text-[11px] font-mono text-gray-400 uppercase tracking-wider">Agile &amp; PRD Lead</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action CTAs -->
+  <div class="pt-8 mt-8 border-t border-gray-100 flex flex-wrap items-center gap-3">
+    <a href="#contact" class="inline-flex items-center gap-2 bg-charcoal hover:bg-[#0D8A9E] text-white px-6 py-3 rounded-full font-semibold text-xs sm:text-sm tracking-wide transition-colors">
+      <span>Get in Touch</span>
+      <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-75"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/fathudzikri" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-gray-200 hover:border-gray-400 bg-white text-charcoal px-5 py-3 rounded-full font-semibold text-xs sm:text-sm transition-colors">
+      <i class="fa-brands fa-linkedin text-charcoal text-sm"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a href="mailto:export@sukabumigreenstone.com" class="inline-flex items-center gap-2 text-charcoal-muted hover:text-charcoal px-4 py-3 rounded-full font-semibold text-xs sm:text-sm transition-colors">
+      <i class="fa-regular fa-envelope"></i>
+      <span>Email Inquiries</span>
+    </a>
+  </div>
+</div>
+
+<!-- Right Column: Profile Showcase Card with Natural Architectural Framing -->
+<div class="lg:col-span-5 bg-white rounded-3xl p-5 border border-gray-200/80 shadow-sm flex flex-col justify-between">
+  <div class="space-y-4">
+    <!-- Image Box with Natural Aspect Ratio & Top Centered Framing -->
+    <div class="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100 border border-gray-200">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEag_ejm7AMFvNZ9TPvAkQtM9QMPCZttI7ZL2ibJrGEUiqGx7Od9c2AlAPwjiFPpsphtAx6VGMt-q3r6uoNbGIdEtKKdV9EpuAnuLBHsRLjM1nWmZ7yiyXzrmkneVl6PJj47wfIOhip8EY7enFLuZ2diBpJuA2QOO8yzBQoOCI-oZXSoE61_55RBvb9ut6tSyvhXyJAw7pDTA3B7RFnuE8rgVEpiM6nRW3EnDSH-xyUDKZL2D35Eeu" alt="Muhammad Fathudzikri Aulia Portrait" class="w-full h-full object-cover" style="object-position: center 18%;" loading="eager">
+      
+      <!-- Understated Floating Info Tag -->
+      <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-gray-200/60 shadow-xs flex items-center gap-1.5 text-xs text-charcoal font-medium">
+        <i class="fa-solid fa-location-dot text-charcoal-muted text-[10px]"></i>
+        <span>Bogor / Sukabumi, ID</span>
+      </div>
+    </div>
+
+    <!-- Profile Spec Metadata -->
+    <div class="p-1 flex items-center justify-between text-xs text-charcoal-muted font-inter">
+      <div>
+        <p class="font-bold text-charcoal text-sm">Muhammad Fathudzikri Aulia</p>
+        <p class="text-xs text-gray-500">B.IT Digital Transformation (IIUM)</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="https://www.linkedin.com/in/fathudzikri" target="_blank" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-charcoal hover:bg-gray-100 transition-colors" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin text-xs"></i>
+        </a>
+        <a href="https://wa.me/6281513687278" target="_blank" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-charcoal hover:bg-gray-100 transition-colors" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub-caption info -->
+  <div class="pt-3 border-t border-gray-100 text-[11px] font-mono text-gray-400 flex items-center justify-between">
+    <span>COMMERCIAL LEAD &amp; TECH STRATEGIST</span>
+    <span>VERIFIED CREDENTIALS</span>
+  </div>
+</div></section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 2: MISSION & ECOSYSTEM BANNER (Deep Ocean Teal #0D8A9E Card) -->
+    <!-- ======================================================================= -->
+    <section class="bg-charcoal rounded-3xl sm:rounded-4xl p-8 sm:p-10 lg:p-12 text-white shadow-sm relative overflow-hidden">
+  <div class="relative z-10 max-w-4xl space-y-6">
+    <span class="text-[11px] font-mono uppercase tracking-widest text-gray-400 border border-white/10 px-3 py-1 rounded-full">
+      Core Directive
+    </span>
+    <blockquote class="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-snug tracking-tight text-white font-sans">
+      “My mission is to translate complex business goals into scalable digital systems and high-value international trade operations.”
+    </blockquote>
+  </div>
+
+  <!-- Verified Commercial Ecosystem Strip -->
+  <div class="relative z-10 mt-10 pt-8 border-t border-white/10">
+    <p class="text-[11px] font-mono uppercase tracking-wider text-gray-400 mb-4">
+      Ecosystem Affiliations &amp; Strategic Ventures
+    </p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <a href="https://www.cv.nusagri.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors flex flex-col items-center justify-center text-center">
+        <span class="font-bold text-xs tracking-wider text-white">CV NUSAGRI</span>
+        <span class="text-[10px] text-gray-400 font-mono mt-0.5">Pet Litter &amp; Minerals R&amp;D</span>
+      </a>
+      <a href="https://www.sukabumigreenstone.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors flex flex-col items-center justify-center text-center">
+        <span class="font-bold text-xs tracking-wider text-white">SUKABUMI GREENSTONE</span>
+        <span class="text-[10px] text-gray-400 font-mono mt-0.5">Architectural Export</span>
+      </a>
+      <a href="https://www.stonehubindonesia.com" target="_blank" rel="noopener noreferrer" class="p-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors flex flex-col items-center justify-center text-center">
+        <span class="font-bold text-xs tracking-wider text-white">STONE HUB ID</span>
+        <span class="text-[10px] text-gray-400 font-mono mt-0.5">B2B Stone Aggregator</span>
+      </a>
+      <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center text-center">
+        <span class="font-bold text-xs tracking-wider text-white">ASPENKU</span>
+        <span class="text-[10px] text-gray-400 font-mono mt-0.5">National Export Platform</span>
+      </div>
+      <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex flex-col items-center justify-center text-center">
+        <span class="font-bold text-xs tracking-wider text-white">IIUM ALUMNI</span>
+        <span class="text-[10px] text-gray-400 font-mono mt-0.5">B.IT Digital Transformation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 3: CORE COMPETENCIES ("How Can I Assist You?" - Numbered 01-04) -->
+    <!-- ======================================================================= -->
+    <section id="competencies" class="space-y-6 pt-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left Side: Context & Value Proposition -->
+        <div class="lg:col-span-4 bg-white rounded-3xl p-8 border border-gray-200/70 shadow-bento space-y-4">
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#0D8A9E] bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
+            Expertise Matrix
+          </span>
+          <h2 class="text-3xl font-extrabold text-charcoal text-tight leading-snug">
+            How Can I Assist You?
+          </h2>
+          <p class="text-charcoal-muted text-sm leading-relaxed font-inter">
+            Bridging technical engineering and commercial reality. Whether structuring a new enterprise digital product from ground zero or leading end-to-end global trade negotiations, my cross-functional competence eliminates ambiguity.
+          </p>
+          <div class="pt-4 border-t border-gray-100">
+            <div class="flex items-center gap-3 text-xs font-semibold text-charcoal">
+              <span class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>Available for full-time roles &amp; advisory contracts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: 2x2 Numbered Bento Grid (01 to 04) -->
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <!-- Card 01: Business & Systems Analysis -->
+          <div class="bg-white rounded-3xl p-7 border border-gray-200/70 shadow-bento hover:shadow-bento-hover transition-all duration-300 relative group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-black text-gray-200 group-hover:text-[#0D8A9E] transition-colors">01</span>
+              <span class="w-10 h-10 rounded-2xl bg-teal-50 text-[#0D8A9E] flex items-center justify-center text-sm font-bold">
+                <i class="fa-solid fa-sitemap"></i>
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-charcoal mb-2 group-hover:text-[#0D8A9E] transition-colors">
+              Business Analysis &amp; PRD/SRS
+            </h3>
+            <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">
+              Formulating institutional Product Requirements Documents (PRD), Software Requirements Specifications (SRS), User Stories, ERD, and UML process diagrams that translate business vision into flawless developer execution.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">PRD &amp; SRS</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">UML / ERD</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">User Stories</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Wireframing</span>
+            </div>
+          </div>
+
+          <!-- Card 02: Digital Transformation & IT PM -->
+          <div class="bg-white rounded-3xl p-7 border border-gray-200/70 shadow-bento hover:shadow-bento-hover transition-all duration-300 relative group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-black text-gray-200 group-hover:text-[#0D8A9E] transition-colors">02</span>
+              <span class="w-10 h-10 rounded-2xl bg-teal-50 text-[#0D8A9E] flex items-center justify-center text-sm font-bold">
+                <i class="fa-solid fa-diagram-project"></i>
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-charcoal mb-2 group-hover:text-[#0D8A9E] transition-colors">
+              Digital Transformation &amp; IT PM
+            </h3>
+            <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">
+              End-to-end SDLC lifecycle management utilizing Agile, Scrum, and Kanban methodologies. Facilitating sprint rituals, backlog grooming, risk registers, and synchronizing commercial stakeholders with engineering teams.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Agile / Scrum</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Jira &amp; Trello</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">SDLC Governance</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Sprint Planning</span>
+            </div>
+          </div>
+
+          <!-- Card 03: International Business & Export Ops -->
+          <div class="bg-white rounded-3xl p-7 border border-gray-200/70 shadow-bento hover:shadow-bento-hover transition-all duration-300 relative group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-black text-gray-200 group-hover:text-[#0D8A9E] transition-colors">03</span>
+              <span class="w-10 h-10 rounded-2xl bg-teal-50 text-[#0D8A9E] flex items-center justify-center text-sm font-bold">
+                <i class="fa-solid fa-ship"></i>
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-charcoal mb-2 group-hover:text-[#0D8A9E] transition-colors">
+              International Business &amp; Export
+            </h3>
+            <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">
+              B2B international market expansion, buyer lead generation, overseas contract negotiations, export cost calculation (Incoterms FOB/CIF), container logistics, customs compliance, and supply chain stewardship.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Global B2B Sales</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">FOB / CIF Quotations</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Cross-Border Ops</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Supply Chain</span>
+            </div>
+          </div>
+
+          <!-- Card 04: Product Development & R&D -->
+          <div class="bg-white rounded-3xl p-7 border border-gray-200/70 shadow-bento hover:shadow-bento-hover transition-all duration-300 relative group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-3xl font-black text-gray-200 group-hover:text-[#0D8A9E] transition-colors">04</span>
+              <span class="w-10 h-10 rounded-2xl bg-teal-50 text-[#0D8A9E] flex items-center justify-center text-sm font-bold">
+                <i class="fa-solid fa-flask"></i>
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-charcoal mb-2 group-hover:text-[#0D8A9E] transition-colors">
+              Product Development &amp; R&amp;D
+            </h3>
+            <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">
+              Innovating natural mineral products (activated zeolite &amp; volcanic pumice pet litter) and export-grade Sukabumi Greenstone architectural tiles. Overseeing lab specs, moisture testing, and scalable factory manufacturing.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Pet Litter R&amp;D</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Zeolite / Pumice</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Greenstone Specs</span>
+              <span class="text-[10px] font-semibold bg-gray-100 text-charcoal px-2.5 py-1 rounded-md">Quality Control</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 4: SELECTED WORK & BUSINESS VENTURES (Bento Showcase Grid) -->
+    <!-- ======================================================================= -->
+    <section id="works" class="space-y-6 pt-4"><div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-gray-200/80 pb-4">
+  <div>
+    <span class="text-xs font-mono uppercase tracking-wider text-[#0D8A9E]">
+      Selected Works &amp; Ventures
+    </span>
+    <h2 class="text-3xl font-extrabold text-charcoal text-tight mt-1">
+      Enterprise Systems &amp; Global Trade
+    </h2>
+  </div>
+  <p class="text-xs sm:text-sm text-charcoal-muted max-w-md font-inter">
+    Documented case studies spanning national digital infrastructure and scalable international mineral exports.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <!-- Venture 1: CV Nusagri with real factory/operations photo -->
+  <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200/80 shadow-sm flex flex-col justify-between group">
+    <div>
+      <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden mb-5 bg-gray-100 border border-gray-200 relative"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTMleLOKRYfTrBPUBytpLslTfaSJYbPtHuPOyvjgU9wMQIWFvHEub2o3a-vig7emH-v_M_Vdp2y-j43xKLzZnUnxwXowtHfYZ9au3_NBpjTRMQNBQ4rLe_W_IFYK2wMAlU-fdF1th41rhVcyNLZF8OtmWFFein_J_jwVuRtrgGm4qQxC3zzzqNdaK-szDf_H7YpNkh1eyCWp0h-NEFtSvJwJmFTcsdDz_Ub76OvfDDztTTjfgyjYU2" alt="Zeolite Pellet Pet Litter R&amp;D" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute bottom-3 left-3 bg-charcoal/85 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-mono flex items-center gap-1.5"><span>MINERAL PRODUCT R&amp;D</span></div></div>
+
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="text-xs font-mono text-[#0D8A9E] uppercase tracking-wide">COMMERCIAL EXPORT OPS • 2022 – PRESENT</span>
+        <a href="https://www.cv.nusagri.com" target="_blank" class="text-charcoal hover:text-[#0D8A9E] text-xs font-mono">
+          <span>cv.nusagri.com</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5"></i>
+        </a>
+      </div>
+
+      <h3 class="text-xl font-bold text-charcoal mb-2">Business Development Manager &amp; Product R&amp;D — CV Nusagri</h3>
+      <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">Directed end-to-end commercial export expansion, managing FOB/CIF negotiations, overseas container logistics, and customs documentation. Spearheaded lab formulation R&amp;D for clump-forming zeolite and volcanic pumice pet litter from concept to international trial orders.</p>
+    </div>
+
+    <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-1.5 font-mono text-[10px]">
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">B2B EXPORT</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">PET LITTER R&amp;D</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">SUPPLY CHAIN</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">INCOTERMS (FOB/CIF)</span>
+    </div>
+  </div>
+
+  <!-- Venture 2: Sukabumi Greenstone with authentic architectural photo -->
+  <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200/80 shadow-sm flex flex-col justify-between group">
+    <div>
+      <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden mb-5 bg-gray-100 border border-gray-200 relative"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjgrm0NV6M1dyY34ZQPgAyYgEl1lWXgB396uMjZR0RtH3sDr3oF09F0QN5VNOvhVjVVRKW_QxKgaOkGUsP_0M02L6Pmnqm4OFMUwC6m3tDf13pBGH3_E8uag4dem5WhPlbxMjfGQF3Cvi_HDnBQzO5bxDgMQun3-mbhiMgjGgW57wfdG2OTvKVzUT-e_PtQsoeI7kxZ-eicfGrtACSMIiOaX_GanaDJPgMRSPe7tz0xEgo8tsTq8yz" alt="Sukabumi Greenstone Luxury Architecture Application" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute bottom-3 left-3 bg-charcoal/85 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-mono flex items-center gap-1.5"><span>LUXURY RESORT SPECIFICATION</span></div></div>
+
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="text-xs font-mono text-[#0D8A9E] uppercase tracking-wide">GLOBAL NATURAL STONE • VENTURE</span>
+        <a href="https://www.sukabumigreenstone.com" target="_blank" class="text-charcoal hover:text-[#0D8A9E] text-xs font-mono">
+          <span>sukabumigreenstone.com</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5"></i>
+        </a>
+      </div>
+
+      <h3 class="text-xl font-bold text-charcoal mb-2">International Trade Specialist &amp; Commercial Lead — Sukabumi Greenstone</h3>
+      <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">Spearheaded global B2B digital acquisition channels and overseas buyer relationships for natural green quartzite (Pedra Hijau). Structured international supply contracts, technical quality grading, and ocean freight logistics for luxury villa and resort hospitality projects worldwide.</p>
+    </div>
+
+    <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-1.5 font-mono text-[10px]">
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">ARCHITECTURAL QUARTZITE</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">GLOBAL PROCUREMENT</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">B2B DIGITAL COMMERCE</span>
+    </div>
+  </div>
+
+  <!-- Venture 3: ASPENKU National Export Platform -->
+  <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200/80 shadow-sm flex flex-col justify-between group">
+    <div>
+      <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden mb-5 bg-gray-100 border border-gray-200 relative"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB05KyjGypTai7TwArjY2VkDcKmZ3YtVq__CiBq8hpIxUHBcfYknTS4qx6fYznUYxZSRKIw19DGSSjM-2_CJMvLkEygl14OeYtJ4Tn_0satGmrZ9nhdHAs7-juNX6Sli6F_1q2mf29PXSNPXbPN9L_73ZlRs7cJlacslMh0Hg3G9vQQ8E7yQA2s49oOBsvuS7WZQQ_YGqL8Cjzd5fOya6_IjbuQJwGt3LYoXCQ2F47tDmqhB-h23SF" alt="ASPENKU Indonesian Exporter Marketplace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute bottom-3 left-3 bg-charcoal/85 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-mono flex items-center gap-1.5"><span>NATIONAL EXPORT PLATFORM</span></div></div>
+
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="text-xs font-mono text-[#0D8A9E] uppercase tracking-wide">DIGITAL INFRASTRUCTURE • 2020 – 2022</span>
+        <span class="text-xs font-mono text-gray-400">Enterprise App</span>
+      </div>
+
+      <h3 class="text-xl font-bold text-charcoal mb-2">Lead Business Analyst — ASPENKU (National Export Platform)</h3>
+      <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">Served as sole Business Analyst translating complex national export regulations into detailed PRD, SRS, ERD models, and Figma wireframes. Bridged trade ministry stakeholders and technical software engineers to build seamless exporter verification and buyer matchmaking workflows.</p>
+    </div>
+
+    <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-1.5 font-mono text-[10px]">
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">PRD &amp; SRS</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">UML &amp; ERD</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">SDLC GOVERNANCE</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">FIGMA WIREFRAMING</span>
+    </div>
+  </div>
+
+  <!-- Venture 4: Stone Hub Indonesia -->
+  <div class="bg-white rounded-3xl p-6 sm:p-7 border border-gray-200/80 shadow-sm flex flex-col justify-between group">
+    <div>
+      <div class="w-full aspect-[16/9] rounded-2xl overflow-hidden mb-5 bg-gray-100 border border-gray-200 relative"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0LtrzxM0P33zeYpiXf0T3VT09IQycC8CRf-rQdB7OHQtTtCKFtJSDQ4hPZ5BqcanFXW1OeTrL3O0G74hA92q1ZMbk1Ii600PjU9Eco5-y1bLV4UavX7WjucVYL6RCKr0qZ2WdM_gS0vu0-mRKliL8Qf37WgH86obIHJmcZOxWqRvXnlow0qcpR0LcIYPQpKptlcjXq0SILQpZNrN3ub9iBQWoVxX8mwY_DKwO6aFrbzfZkhCjYoGY" alt="Field operations and stone aggregation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"><div class="absolute bottom-3 left-3 bg-charcoal/85 backdrop-blur-md px-3 py-1 rounded-full text-white text-[10px] font-mono flex items-center gap-1.5"><span>FIELD AGGREGATION &amp; QC</span></div></div>
+
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="text-xs font-mono text-[#0D8A9E] uppercase tracking-wide">COMMODITY PLATFORM • VENTURE</span>
+        <a href="https://www.stonehubindonesia.com" target="_blank" class="text-charcoal hover:text-[#0D8A9E] text-xs font-mono">
+          <span>stonehubindonesia.com</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5"></i>
+        </a>
+      </div>
+
+      <h3 class="text-xl font-bold text-charcoal mb-2">Digital Platform Architect &amp; Commercial Lead — Stone Hub Indonesia</h3>
+      <p class="text-xs text-charcoal-muted leading-relaxed font-inter mb-4">Designed and launched an end-to-end B2B catalog architecture uniting quarries across Java, Bali, and Sumatra. Standardized dimensional quality control specs, pricing models, and multi-quarry procurement pipelines for international commercial buyers.</p>
+    </div>
+
+    <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-1.5 font-mono text-[10px]">
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">DIGITAL CATALOG</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">B2B SOURCING</span>
+      <span class="bg-gray-100 text-charcoal px-2.5 py-1 rounded">QUALITY STANDARDIZATION</span>
+    </div>
+  </div>
+
+</div></section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 5: CAREER EXPERIENCE, EDUCATION & TECH STACK (Bento Cluster) -->
+    <!-- ======================================================================= -->
+    <section id="experience" class="space-y-6 pt-4">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#0D8A9E] bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
+            Professional Trajectory
+          </span>
+          <h2 class="text-3xl font-extrabold text-charcoal text-tight mt-2">
+            Wanna See My Experience?
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-charcoal-muted max-w-md font-inter">
+          Continuous execution blending academic excellence in Digital Transformation with high-stakes commercial stewardship.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+        
+        <!-- Left: Work Experience Timeline (7 Cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-9 border border-gray-200/70 shadow-bento space-y-6">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <h3 class="text-lg font-bold text-charcoal flex items-center gap-2">
+              <i class="fa-solid fa-briefcase text-[#0D8A9E]"></i>
+              Career Experience
+            </h3>
+            <span class="text-xs font-semibold text-charcoal-muted uppercase">Verified History</span>
+          </div>
+
+          <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-gray-100">
+            
+            <!-- Item 1: CV Nusagri -->
+            <div class="relative pl-9 space-y-2">
+              <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-[#0D8A9E] border-4 border-white shadow"></div>
+              <div class="flex flex-wrap items-center justify-between gap-1">
+                <h4 class="text-base font-extrabold text-charcoal">Business Development Manager</h4>
+                <span class="text-xs font-bold text-[#0D8A9E] bg-teal-50 px-2.5 py-0.5 rounded-full">2022 – Present</span>
+              </div>
+              <p class="text-xs font-bold text-gray-500">CV Nusagri • Sukabumi / Bogor, West Java</p>
+              <ul class="text-xs text-charcoal-muted space-y-1.5 font-inter pt-1">
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-chevron-right text-[9px] text-[#0D8A9E] mt-1"></i>
+                  <span>Spearheaded international sales operations and B2B overseas buyer matchmaking for natural zeolite and pumice pet litter.</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-chevron-right text-[9px] text-[#0D8A9E] mt-1"></i>
+                  <span>Managed end-to-end export cost structures (FOB, CIF), cross-border contracts, and factory quality assurance specifications.</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-chevron-right text-[9px] text-[#0D8A9E] mt-1"></i>
+                  <span>Initiated digital brand presence across web and social channels for overseas commercial credibility.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Item 2: ASPENKU -->
+            <div class="relative pl-9 space-y-2">
+              <div class="absolute left-1.5 top-1 w-4 h-4 rounded-full bg-gray-400 border-4 border-white shadow"></div>
+              <div class="flex flex-wrap items-center justify-between gap-1">
+                <h4 class="text-base font-extrabold text-charcoal">Business Analyst</h4>
+                <span class="text-xs font-bold text-gray-600 bg-gray-100 px-2.5 py-0.5 rounded-full">Nov 2020 – Nov 2022</span>
+              </div>
+              <p class="text-xs font-bold text-gray-500">ASPENKU (National Export Support Application)</p>
+              <ul class="text-xs text-charcoal-muted space-y-1.5 font-inter pt-1">
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-chevron-right text-[9px] text-[#0D8A9E] mt-1"></i>
+                  <span>Authored comprehensive PRD, SRS, User Stories, and UML diagrams for national SME export platform development.</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-chevron-right text-[9px] text-[#0D8A9E] mt-1"></i>
+                  <span>Bridged commercial requirements between government/trade associations and technical software engineering squads.</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-chevron-right text-[9px] text-[#0D8A9E] mt-1"></i>
+                  <span>Designed high-fidelity user workflows and interactive wireframes in Figma for critical user journey validation.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Education & Certifications (5 Cols) -->
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          
+          <!-- Education Card -->
+          <div class="bg-white rounded-3xl p-7 border border-gray-200/70 shadow-bento space-y-4">
+            <div class="flex items-center gap-2 border-b border-gray-100 pb-3">
+              <span class="w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-xs">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </span>
+              <h3 class="text-base font-bold text-charcoal">Education</h3>
+            </div>
+
+            <div class="space-y-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-[#0D8A9E]">Bachelor's Degree</span>
+              <h4 class="text-base font-extrabold text-charcoal">International Islamic University Malaysia (IIUM)</h4>
+              <p class="text-xs font-semibold text-charcoal-muted">Bachelor of Information Technology (B.IT)</p>
+              <p class="text-xs text-gray-500 font-inter">Major: <span class="font-bold text-charcoal">Digital Transformation</span></p>
+              <p class="text-[11px] text-gray-400 font-inter pt-1">Focused on enterprise IT strategy, systems analysis, data engineering, and agile technology adoption.</p>
+            </div>
+          </div>
+
+          <!-- Professional Programs Card -->
+          <div class="bg-white rounded-3xl p-7 border border-gray-200/70 shadow-bento space-y-3 flex-1">
+            <div class="flex items-center gap-2 border-b border-gray-100 pb-3">
+              <span class="w-8 h-8 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-xs">
+                <i class="fa-solid fa-certificate"></i>
+              </span>
+              <h3 class="text-base font-bold text-charcoal">Executive Programs &amp; Training</h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+              <div class="p-2.5 bg-gray-50 rounded-xl border border-gray-100">
+                <p class="text-xs font-bold text-charcoal">BINAR Academy</p>
+                <p class="text-[10px] text-charcoal-muted">Product Management Program</p>
+              </div>
+              <div class="p-2.5 bg-gray-50 rounded-xl border border-gray-100">
+                <p class="text-xs font-bold text-charcoal">PACMANN AI</p>
+                <p class="text-[10px] text-charcoal-muted">Data Analytics &amp; Decision Science</p>
+              </div>
+              <div class="p-2.5 bg-gray-50 rounded-xl border border-gray-100">
+                <p class="text-xs font-bold text-charcoal">freeCodeCamp</p>
+                <p class="text-[10px] text-charcoal-muted">Full-Stack Development Basics</p>
+              </div>
+              <div class="p-2.5 bg-gray-50 rounded-xl border border-gray-100">
+                <p class="text-xs font-bold text-charcoal">Google Digital Garage</p>
+                <p class="text-[10px] text-charcoal-muted">Digital Strategy &amp; Marketing</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Technical Toolkit & Languages Strip -->
+      <div class="bg-white rounded-3xl p-7 sm:p-8 border border-gray-200/70 shadow-bento">
+        <h3 class="text-base font-bold text-charcoal mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-[#0D8A9E]"></i>
+          Technical Toolkit &amp; Methodology Arsenal
+        </h3>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div class="bg-gray-50 p-3 rounded-2xl border border-gray-100 flex items-center gap-2.5">
+            <i class="fa-brands fa-figma text-purple-600 text-lg"></i>
+            <div>
+              <p class="text-xs font-bold text-charcoal">Figma • FigJam</p>
+              <p class="text-[10px] text-gray-400">Wireframes &amp; Flows</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-3 rounded-2xl border border-gray-100 flex items-center gap-2.5">
+            <i class="fa-brands fa-jira text-blue-600 text-lg"></i>
+            <div>
+              <p class="text-xs font-bold text-charcoal">Jira • Trello</p>
+              <p class="text-[10px] text-gray-400">Scrum / Sprint Ops</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-3 rounded-2xl border border-gray-100 flex items-center gap-2.5">
+            <i class="fa-solid fa-chart-pie text-amber-500 text-lg"></i>
+            <div>
+              <p class="text-xs font-bold text-charcoal">Power BI • Excel</p>
+              <p class="text-[10px] text-gray-400">Advanced Analytics</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-3 rounded-2xl border border-gray-100 flex items-center gap-2.5">
+            <i class="fa-solid fa-diagram-project text-teal-600 text-lg"></i>
+            <div>
+              <p class="text-xs font-bold text-charcoal">Draw.io • Lucid</p>
+              <p class="text-[10px] text-gray-400">UML • ERD • Process</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-3 rounded-2xl border border-gray-100 flex items-center gap-2.5">
+            <i class="fa-brands fa-react text-sky-500 text-lg"></i>
+            <div>
+              <p class="text-xs font-bold text-charcoal">HTML • JS • SQL</p>
+              <p class="text-[10px] text-gray-400">Full-Stack Basics</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-3 rounded-2xl border border-gray-100 flex items-center gap-2.5">
+            <i class="fa-solid fa-language text-emerald-600 text-lg"></i>
+            <div>
+              <p class="text-xs font-bold text-charcoal">Bilingual</p>
+              <p class="text-[10px] text-gray-400">English &amp; Indonesian</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 6: INTERACTIVE CONTACT CARD (Soft Lavender-Periwinkle Gradient) -->
+    <!-- ======================================================================= -->
+    <section id="contact" class="bg-white rounded-3xl sm:rounded-4xl p-8 sm:p-12 border border-gray-200/80 shadow-sm relative overflow-hidden">
+  <div class="max-w-3xl mx-auto space-y-8 text-center">
+    <div class="space-y-3">
+      <span class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-charcoal-muted bg-gray-50 border border-gray-200 px-4 py-1.5 rounded-full">
+        Start a Collaboration
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal text-tight">
+        Ready to Build Next-Level Systems Together?
+      </h2>
+      <p class="text-charcoal-muted text-sm sm:text-base font-inter max-w-xl mx-auto">
+        Whether you are scouting an impactful Business Analyst, an IT Project Manager, or an International Trade Partner, let’s start a conversation.
+      </p>
+    </div>
+
+    <!-- Clean High-Contrast Action Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left pt-2">
+      <a href="https://wa.me/6281513687278?text=Hello%20Muhammad%20Fathudzikri,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity." target="_blank" class="p-6 rounded-2xl border border-gray-200 hover:border-charcoal bg-gray-50 hover:bg-white transition-all duration-300 flex items-center justify-between group">
+        <div>
+          <p class="text-[11px] font-mono uppercase tracking-wider text-gray-400">Instant Communication</p>
+          <h4 class="text-base font-bold text-charcoal mt-1 group-hover:text-[#0D8A9E] transition-colors">WhatsApp Channel</h4>
+          <p class="text-xs text-charcoal-muted mt-0.5">+62 815 1368 7278</p>
+        </div>
+        <span class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-charcoal group-hover:bg-charcoal group-hover:text-white transition-all">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+        </span>
+      </a>
+
+      <a href="mailto:export@sukabumigreenstone.com?subject=Strategic%20Opportunity%20Inquiry%20-%20Muhammad%20Fathudzikri%20Aulia" class="p-6 rounded-2xl border border-gray-200 hover:border-charcoal bg-gray-50 hover:bg-white transition-all duration-300 flex items-center justify-between group">
+        <div>
+          <p class="text-[11px] font-mono uppercase tracking-wider text-gray-400">Direct Corporate Email</p>
+          <h4 class="text-base font-bold text-charcoal mt-1 group-hover:text-[#0D8A9E] transition-colors">export@sukabumigreenstone.com</h4>
+          <p class="text-xs text-charcoal-muted mt-0.5">Personal: mfathudzikriaulia@gmail.com</p>
+        </div>
+        <span class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-charcoal group-hover:bg-charcoal group-hover:text-white transition-all">
+          <i class="fa-regular fa-envelope text-base"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- ======================================================================= -->
+    <!-- SECTION 7: FOOTER ("Let's connect and chat" + Dynamic Floating Badges) -->
+    <!-- ======================================================================= -->
+    <footer class="bg-white rounded-3xl sm:rounded-4xl p-8 sm:p-12 border border-gray-200/70 shadow-bento space-y-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Big Editorial Typography -->
+        <div class="lg:col-span-6 space-y-4">
+          <p class="text-xs font-extrabold uppercase tracking-widest text-[#0D8A9E]">Available Worldwide • Remote &amp; Hybrid</p>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal text-tight leading-tight">
+            Let’s connect and chat.
+          </h2>
+          <p class="text-xs sm:text-sm text-charcoal-muted font-inter max-w-md">
+            Open for Business Analyst, IT PM, Product Manager, and Digital Transformation positions, as well as global B2B trade partnerships.
+          </p>
+          <div class="pt-2">
+            <a href="mailto:export@sukabumigreenstone.com" class="text-lg sm:text-xl font-extrabold text-charcoal hover:text-[#0D8A9E] transition-colors underline decoration-2 underline-offset-4">
+              export@sukabumigreenstone.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Teal Accent Interactive Floating Pill Buttons Grid -->
+        <div class="lg:col-span-6 bg-[#0D8A9E] rounded-3xl p-6 sm:p-8 text-white space-y-4 shadow-md">
+          <p class="text-xs uppercase font-extrabold tracking-wider text-teal-100">
+            Interactive Ecosystem Directory
+          </p>
+          
+          <div class="flex flex-wrap gap-2.5">
+            <a href="https://www.linkedin.com/in/fathudzikri" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-white text-charcoal text-xs font-bold hover:bg-black hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm flex items-center gap-2">
+              <i class="fa-brands fa-linkedin text-blue-600"></i>
+              LINKEDIN
+            </a>
+
+            <a href="https://wa.me/6281513687278" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-white text-charcoal text-xs font-bold hover:bg-emerald-600 hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+              WHATSAPP
+            </a>
+
+            <a href="https://instagram.com/sukabumigreenstone" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-white text-charcoal text-xs font-bold hover:bg-pink-600 hover:text-white transition-all transform hover:-translate-y-0.5 shadow-sm flex items-center gap-2">
+              <i class="fa-brands fa-instagram text-pink-600"></i>
+              INSTAGRAM
+            </a>
+
+            <a href="https://www.cv.nusagri.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-charcoal border border-white/30 text-xs font-bold transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i class="fa-solid fa-leaf text-teal-200"></i>
+              CV. NUSAGRI
+            </a>
+
+            <a href="https://www.sukabumigreenstone.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-charcoal border border-white/30 text-xs font-bold transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i class="fa-solid fa-gem text-teal-200"></i>
+              SUKABUMI GREENSTONE
+            </a>
+
+            <a href="https://www.stonehubindonesia.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-white/20 hover:bg-white text-white hover:text-charcoal border border-white/30 text-xs font-bold transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <i class="fa-solid fa-cubes text-teal-200"></i>
+              STONE HUB ID
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Monogram -->
+      <div class="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-charcoal-muted">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded-full bg-charcoal text-white text-[10px] font-bold flex items-center justify-center">MFA</div>
+          <span>© 2025 Muhammad Fathudzikri Aulia. All rights reserved.</span>
+        </div>
+        <div class="flex items-center gap-4 text-[11px]">
+          <span>Designed with Bento Grid Systems</span>
+          •
+          <span>Digital Transformation &amp; Global Trade</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- LIGHTWEIGHT VANILLA JAVASCRIPT FOR INTERACTION -->
+  <!-- ========================================================================= -->
+  <script>
+    // Mobile navigation toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+
+      // Close mobile menu when a navigation link is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+        });
+      });
+    }
+
+    // Dynamic header elevation on scroll
+    const headerNav = document.querySelector('#main-header nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        headerNav.classList.add('shadow-md', 'py-2.5');
+        headerNav.classList.remove('py-3');
+      } else {
+        headerNav.classList.remove('shadow-md', 'py-2.5');
+        headerNav.classList.add('py-3');
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+</body></html>
